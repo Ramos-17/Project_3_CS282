@@ -1,0 +1,15 @@
+Self-Evaluation:
+
+- I implemented travel independently.
+- I participated in the collaboration for the tour.java.
+- I actively communicated with my group member, Micheal Ruiz, through voice chat on Discord.
+- I believe I contributed equally to the project and took responsibility for completing assigned tasks.
+
+Group Evaluation:
+
+- Micheal Ruiz completed the patrol.java file independently and contributed significantly to the collaborative files.
+- Communication was clear and consistent mainly through Discord voice calls.
+- Workload was fairly distributed between members.
+- Overall, I believe the group worked efficiently and successfully completed the project goals.
+- We collaborated on tour.java.
+- implemented a brute force method to find a solution for Tour.java.

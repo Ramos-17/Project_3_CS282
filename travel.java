@@ -2,13 +2,13 @@ import java.util.*;
 import java.io.*;
 
 public class travel {
-    // Graph representation using adjacency list
+    
     private Map<String, List<Edge>> graph;
     private Map<String, Integer> distances;
     private Map<String, String> previous;
     private Set<String> visited;
 
-    // Edge class to represent weighted directed edges
+    
     private static class Edge {
         String destination;
         int weight;
@@ -26,21 +26,21 @@ public class travel {
         visited = new HashSet<>();
     }
 
-    // Add an edge to the graph
+    
     public void addEdge(String source, String destination, int weight) {
         graph.putIfAbsent(source, new ArrayList<>());
         graph.get(source).add(new Edge(destination, weight));
     }
 
-    // Dijkstra's algorithm implementation
+    
     public List<String> findShortestPath(String start, String end) {
-        // Initialize distances
+        
         for (String planet : graph.keySet()) {
             distances.put(planet, Integer.MAX_VALUE);
         }
         distances.put(start, 0);
 
-        // Priority queue for Dijkstra's algorithm
+        
         PriorityQueue<String> priority = new PriorityQueue<>(
             (a, b) -> distances.get(a) - distances.get(b)
         );
@@ -58,12 +58,12 @@ public class travel {
             }
             visited.add(current);
 
-            // Skip if current planet has no outgoing edges
+            
             if (!graph.containsKey(current)) {
                 continue;
             }
 
-            // Check all neighbors
+            
             for (Edge edge : graph.get(current)) {
                 String neighbor = edge.destination;
                 int newDistance = distances.get(current) + edge.weight;
@@ -76,10 +76,10 @@ public class travel {
             }
         }
 
-        // Reconstruct path
+        
         List<String> path = new ArrayList<>();
         if (distances.get(end) == Integer.MAX_VALUE) {
-            return path; // No path exists
+            return path; 
         }
 
         for (String at = end; at != null; at = previous.get(at)) {
@@ -88,7 +88,7 @@ public class travel {
         return path;
     }
 
-    // Read input from file and build graph
+    
     public void readInput(String filename) {
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
             String line;
@@ -116,7 +116,6 @@ public class travel {
         }
     }
 
-    // Main method to run the program
     public static void main(String[] args) {
         if (args.length != 3) {
             System.out.println("Usage: java travel <input_file> <start_planet> <end_planet>");
