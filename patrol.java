@@ -8,6 +8,7 @@ Algorithm hint: This is a Minimum Spanning Tree (MST) problem — you likely nee
 Input: patrol.txt – contains undirected edges like Earth Mars 50.
 Output: The patrol edges and the total cost.  
 */
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -95,5 +96,9 @@ public class patrol {
         this.planet2 = planet2;
         this.weight = weight;
         }
+    }
+
+    public static void main(){
+       
     }
 }
