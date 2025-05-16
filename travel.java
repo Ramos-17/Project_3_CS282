@@ -1,12 +1,3 @@
-/*
-Quick Travel – Class: Travel
-Type of graph: Weighted directed
-Goal: From a starting planet to a destination planet, find the fastest path (least total weight).
-Algorithm hint: This is a Single-Source Shortest Path problem — you should use Dijkstra's algorithm.
-Input: travel.txt – contains directed edges like Earth Mars 50.
-Output: The path from source to destination and the total travel time.
-*/
-
 import java.util.*;
 import java.io.*;
 
@@ -132,12 +123,12 @@ public class travel {
             return;
         }
 
-        travel solver = new travel();
-        solver.readInput(args[0]);
+        travel myTravel = new travel();
+        myTravel.readInput(args[0]);
 
         String start = args[1];
         String end = args[2];
 
-        solver.quickTravel(start, end);
+        myTravel.quickTravel(start, end);
         }
     }
