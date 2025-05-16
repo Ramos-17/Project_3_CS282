@@ -1,0 +1,4 @@
+Earth Mars 50
+Earth Saturn 500
+Venus Saturn 80
+Earth Venus 30
