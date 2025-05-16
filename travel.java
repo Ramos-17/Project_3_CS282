@@ -50,13 +50,13 @@ public class travel {
         distances.put(start, 0);
 
         // Priority queue for Dijkstra's algorithm
-        PriorityQueue<String> pq = new PriorityQueue<>(
+        PriorityQueue<String> priority = new PriorityQueue<>(
             (a, b) -> distances.get(a) - distances.get(b)
         );
-        pq.offer(start);
+        priority.offer(start);
 
-        while (!pq.isEmpty()) {
-            String current = pq.poll();
+        while (!priority.isEmpty()) {
+            String current = priority.poll();
             
             if (current.equals(end)) {
                 break;
@@ -80,7 +80,7 @@ public class travel {
                 if (newDistance < distances.get(neighbor)) {
                     distances.put(neighbor, newDistance);
                     previous.put(neighbor, current);
-                    pq.offer(neighbor);
+                    priority.offer(neighbor);
                 }
             }
         }
