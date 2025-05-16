@@ -14,11 +14,11 @@ import java.io.IOException;
 import java.util.*;
 
 
-public class Patrol {
+public class patrol {
     private List<Edge> edges;
     private Set<String> planets;
 
-    public Patrol() {
+    public patrol() {
         edges = new ArrayList<> ();
         planets = new HashSet<> ();
         loadGraph("patrol.txt");
