@@ -32,7 +32,7 @@ public class travel {
         graph.get(source).add(new Edge(destination, weight));
     }
 
-    
+    //Djikstra's Algorithm
     public List<String> findShortestPath(String start, String end) {
         
         for (String planet : graph.keySet()) {
@@ -102,7 +102,7 @@ public class travel {
                 }
             }
         } catch (IOException e) {
-            System.err.println("Error reading input file: " + e.getMessage());
+            System.err.println("Error reading : " + e.getMessage());
         }
     }
 
@@ -118,7 +118,7 @@ public class travel {
 
     public static void main(String[] args) {
         if (args.length != 3) {
-            System.out.println("Usage: java travel <input_file> <start_planet> <end_planet>");
+            System.out.println("Usage: java travel <input_file> <start_planet> <end_planet>"); //compile, then type this in the terminal
             return;
         }
 

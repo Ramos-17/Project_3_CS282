@@ -96,7 +96,7 @@ public class tour {
 
     public static void main(String[] args) {
         if (args.length != 2) {
-            System.out.println("Usage: java tour <input_file> <start_planet>");
+            System.out.println("Usage: java tour <input_file> <start_planet>"); //compile, then type this in the terminal
             return;
         }
         tour myTour = new tour(args[0]);
